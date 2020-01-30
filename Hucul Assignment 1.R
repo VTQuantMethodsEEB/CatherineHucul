@@ -1,5 +1,3 @@
-#hello world
-
 predBehavior = read.csv("pred_behav.csv") #reading in the csv file
 names(predBehavior) #show the titles of the columns
 
