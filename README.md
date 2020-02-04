@@ -18,3 +18,5 @@ meters, and latency is still being added to the end of the dataset.
 CODE : Hucul Assignment 1 DATA: pred\_behav.csv
 
 Here, I explored how to use R and did some basic calculations.
+
+KL: Great job! Excellent work on your README.
