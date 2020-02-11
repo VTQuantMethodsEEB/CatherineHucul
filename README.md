@@ -15,8 +15,13 @@ meters, and latency is still being added to the end of the dataset.
 
 ## Week 1 – Intro to R
 
-CODE : Hucul Assignment 1 DATA: pred\_behav.csv
+CODE : Hucul Assignment 1 DATA: pred_behav.csv
 
-Here, I explored how to use R and did some basic calculations.
+Copied and pasted from your example: Here, I explored how to use R and did some basic calculations.
 
-KL: Great job! Excellent work on your README.
+## Week 2 + 3 - Data Manipulation and GitHub
+
+Code: week3_CatherineHucul.R
+Data: pred_behav.csv
+
+examined data for mistakes, put data in tidy format (I think) mutate + summarise the data. Week 3 included a few ggplots using the data.
