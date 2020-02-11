@@ -24,4 +24,4 @@ Copied and pasted from your example: Here, I explored how to use R and did some 
 Code: week3_CatherineHucul.R
 Data: pred_behav.csv
 
-examined data for mistakes, put data in tidy format (I think) mutate + summarise the data. Week 3 included a few ggplots using the data.
+examined data for mistakes, put data in tidy format (I think) mutate + summarise the data. Week 3 included a few ggplots using the data. g1 was kind of worked out through your code - it showed the male low chips on the y axis and the types of objects the birds were exposed to. I'm interested to see if there's a difference in response between the beach ball and the raccoon -low chips and average distance from the object are both things that show boldness from the song sparrows. I tried to get both male and female low chips on the same graph, but couldn't figure out how to change the colors based on the sex.I tried to pivot the table, however I ust can't wrap my head around the idea of pivot.
