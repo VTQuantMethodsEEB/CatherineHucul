@@ -22,10 +22,13 @@ predBehav$Location=as.factor(toupper(predBehav$Location))
 
 predBehav %>%
   group_by(Location)%>%
-  summarise(male.low.chips=mean(M.low.chip,na.rm=TRUE))
+  summarise(male.low.chips=mean(M.low.chip,na.rm=TRUE), F.high.chip=mean(F.high.chip,na.rm=TRUE) )
+#do you also want F high chip here? If I am understanding that is what I've done :-)
 
   ######### Is there a way to put the mutate at the end of the line 23 group by/summarise thing?
   ######### Because it throws an error if I just transplant line 33 to line 26
+#see my comment above
+
 #add the mean of the M.low.chip to predBehav
 predBehav = predBehav %>% 
   group_by(Location) %>% 
@@ -69,10 +72,12 @@ g4
 #Tried to get the both male and female low chips on the same y axis, but could't figure out how to color them differently to clearly show what data point comes from what?
 #Does that make sense?
 
-#g3= ggplot(data=predBehav, aes(x=Habitat, y=F.low.chip,M.low.chip, color=Location))+
-#  geom_col()+
-#  geom_point()+
-#  ylab("Low Chips")
-#g3
+g3= ggplot(data=predBehav, aes(x=Habitat, y=F.low.chip, shape=Location),col="black")+
+  geom_point()+
+  geom_point(aes(y=M.low.chip),col="red")+
+  ylab("Low Chips")
+g3
+#I think something like this is what you want, but it would probably be better to put your data in long format
+#e.g. one column low chips, and a column for sex
 
 
