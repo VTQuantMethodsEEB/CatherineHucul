@@ -42,3 +42,20 @@ Data: pred_behav.csv
 Hypothesis 1 (Permutation): Urban birds will low chip more on average to the predator mount (PRED A) than at the beach ball on average because it's a simulated predator presence.
 
 Hypothesis 2 (Wilcoxon rank sum test): Rural males will stay further away from the raccoon mount (PRED A) than the beach ball (PRED B) due to it being a simulated predator presence.
+
+##Week 8 - Linear models and parameters (After spring break!)
+Code: week7+8_CatherineHucul.R
+Data: PredDataNew.csv
+
+Hypothesis: Urban birds will increase high chipping sounds the further away from the raccoon mount they are.
+
+What does the output tell me: There's a negative trend between distance and number of chips? As the distance decreased, the number of chips went higher?
+
+
+week two: Urban birds will increase their high chips + decrease the low chips the further the raccoon mount they are.
+
+Output: Although not significant, both high and low chips decreased as the distance increased
+
+Hyp for Interactive: The number of low chips is influenced by both the distance score and the number of high chips uttered
+Output: again, not significant, but it looks like the interaction between high and low chips are positively influenced - if they're low chipping they're also high chipping?
+
