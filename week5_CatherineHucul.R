@@ -45,7 +45,7 @@ length(lowResult[lowResult>=obs])
 7711/10000
 mean(lowResult>=obs)  
 
-
+##what does this tell you???
 
 ## End the permutation, begin on Hyp 2 - rural male distance with Wilcoxon rank sum test
 
@@ -61,6 +61,7 @@ mDistance <- data.frame(
 
 ww2<-wilcox.test(rpreda,rpredb)
 ww2
+
 
 
 ####Wilcoxon rank sum test with continuity correction
