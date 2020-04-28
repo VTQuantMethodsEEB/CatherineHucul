@@ -43,9 +43,38 @@ View(predDat)
 #ggplot(pp,aes(x=time,y=grahami,colour=light))+
 #  geom_point()+
 #  geom_line(aes(group=light))
+library(tidyverse)
+
+small.dat = predDat %>%
+  filter(predscore=="rac" & Habitat=="Urban")%>%
+  drop_na(predscore)%>%
+  drop_na(Habitat)%>%
+  drop_na(M.high.chip)%>%
+  drop_na(M.low.chip)
+
+small.dat
+
+########create new dataframe with just the subset of data instead of putting subset inside the lm function
 
 #Are the number of low chips based on the number of high chips and the distance?
-hiVlow <- lm(DistanceScore~M.high.chip*M.low.chip, data = predDat, subset=predscore == "rac" &Habitat == "Urban")
+hiVlow <- lm(DistanceScore~M.high.chip*M.low.chip, data = small.dat) #x = m low chip, y = m high chip, additional y =distancescore
+small.dat$yhat = predict(hiVlow)
+
+newdat = with(small.dat,
+          expand.grid( M.high.chip = seq(from = min(M.high.chip), to = max(M.high.chip), by=1),
+                       M.low.chip = c(min(M.low.chip), median(M.low.chip),max(M.low.chip))
+          ))
+newdat$yhat = predict(hiVlow, newdata = newdat)
+
+##now create gg plot
+
+ggplot(newdat,aes(x=M.high.chip,y=yhat,colour=as.factor(M.low.chip)))+ 
+  geom_line()+
+  geom_point(data=small.dat, aes(x=M.high.chip,y=DistanceScore,colour = as.factor(M.low.chip)), shape=1,size=3) #this shows our RAW data
+
+
+#bin one of the continuous variables (high chip or low, do low medium and high numbers)
+
 summary(hiVlow)
 
 #####I just couldn't figure out the graphs. I could get everything else running,
