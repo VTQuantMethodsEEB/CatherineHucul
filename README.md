@@ -59,3 +59,18 @@ Output: Although not significant, both high and low chips decreased as the dista
 Hyp for Interactive: The number of low chips is influenced by both the distance score and the number of high chips uttered
 Output: again, not significant, but it looks like the interaction between high and low chips are positively influenced - if they're low chipping they're also high chipping?
 
+##Week 10 + 11 - GLMS and Model Selection
+
+Code: week10_CatherineHucul
+Data: PredDataNew.csv
+
+Hypothesis: Male high chips (alarm calls) are dictated by the distance, whether it's a ball or  a raccoon, and habitat type.
+Output:Urban habitats have significantly higher amounts of alarm calls than the rural habitats, the raccoon caused more alarm calls than the ball did across both habitats, and rural raccoon had the highest number of alarm calls. 
+
+
+Hypothesis 2: (That you helped me with) Distance is dictated by the type of model + the habitat
+Output: Nothing is significantly different - the GLM showed a p value <.7 for all intercepts (Habitat and type of "predator"). 
+
+##Week 12 - Mixed Models
+
+
