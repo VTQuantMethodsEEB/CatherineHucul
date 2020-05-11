@@ -10,7 +10,7 @@ head(predDat)
 racVball <- lm(DistanceScore~M.high.chip, data = predDat, subset=predscore=="rac" & Habitat=="Urban")
 #rac.dat.only  = predDat %>%
 #  filter(predscore=="rac")
-
+#this is the opposite of what is plotted below
 
 #Test for liniearity
 par(mfrow=c(2,2))  # set 2 rows and 2 column plot layout
@@ -18,6 +18,7 @@ plot(racVball)
 #Unsurprisingly, Normal Q-Q doesn't quite fit, and residuals are all sorts of messed up.
 
 
+library(ggplot2)
 ##assess and anaylyze the commentary in the code
 racxdist=ggplot(data=predDat, aes(x=DistanceScore, y=M.high.chip))+ 
   geom_point()+
@@ -27,13 +28,13 @@ racxdist=ggplot(data=predDat, aes(x=DistanceScore, y=M.high.chip))+
 plot(racxdist)
 
 #There's a negative trend between distance and number of chips? As the distance decreased, the number of chips went higher?
-
+#the opposite of this, as disance increased, the high chips decreased
 
 #############Week 8 Assignment###################
 ## Are the number of high and low chips based on distance?
 hiVlow <- lm(DistanceScore~M.high.chip+M.low.chip, data = predDat, subset=predscore == "rac" &Habitat == "Urban")
 summary(hiVlow)
-
+#you have modeled the opposite of your questions - do the number of high and low chips influence distance? 
 View(predDat)
 
 
