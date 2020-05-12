@@ -8,14 +8,12 @@ library(dplyr)
 
 mHighChip<-glm(M.high.chip~Habitat*predscore,na.action=na.omit, data=predDat)
   summary(mHighChip)
-#
-#Raccoon caused more alarm calls than the ball
-#urban and raccoon had the most significant number of alarm calls.
+#Nothing is significant - most closest to significant was the type of mount (p=0.221). Otherwise habitat had a p=0.908 and the interaction between habitat and predator type was a 0.704
+  
   
 plot(allEffects(mHighChip))
 #Looks like the males chip more often in rural sites rather than in urban sites in response to the raccoon
-#The urban birds alaarm chip more often in response to the ball than the rural sites
-#Overall, raccoons caused more chips in general, while balls responded in fewer chips
+#Overall, raccoons caused more chips in general, while balls responded in fewer chips. Rural birds alarm called more than urban birds in response to the raccoon, however nothing was significant.
 
 ############Tried to fix up the predict so that distance score was on the x axis and alarm call (high chip) was on the y
 
@@ -35,7 +33,7 @@ plot1
 racVball <- glm(DistanceScore~predscore*Habitat, data =predDat, family="poisson")
 summary(racVball)
 
-#Nothing is significantly different - 
+#Nothing is significantly different
 
 
 

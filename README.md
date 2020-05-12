@@ -65,14 +65,19 @@ Code: week10_CatherineHucul
 Data: PredDataNew.csv
 
 Hypothesis: Male high chips (alarm calls) are influenced by whether it's a ball ora raccoon, and habitat type.
-Output:
+Output(also in code): Looks like the males chip more often in rural sites rather than in urban sites in response to the raccoon. Overall, raccoons caused more chips in general, while ball responded in fewer chips. Rural birds alarm called more than urban birds in response to the raccoon, however nothing was significant.
 
 
 Hypothesis 2: (That you helped me with) Distance is dictated by the type of mount + the habitat
-Output: Nothing is significantly different - the GLM showed a p value <.7 for all intercepts (Habitat and type of "predator"). 
+Output: Nothing is significantly different - the GLM showed a p value >.7 for all intercepts (Habitat and type of "predator"). 
 
 Results for the likelihood ratio tests and AIC model selection are found in the code (week10_CatherineHucul). Overall, the LR test said that the best fit model was the additive model of the distance by habitat and predator (glm(DistanceScore~Habitat+predscore)). However the AIC model selection says the null model is the best fit, but only by a little bit (details in the code).
 
 ##Week 12 - Mixed Models
 
+Code: week12_CatherineHucul
+Data: PredDataNew.csv
 
+Ran mixed effect model on hypothesis 2 from last week: Distance is dictated by the type of mount and the habitat with the random effect of either nest id or location (or both). 
+
+Results/AIC showed that either Habitat or the mount type was the best fit for the model. The random effects (location or nest id) had no real effect on my data. 
