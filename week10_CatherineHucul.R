@@ -36,6 +36,7 @@ summary(racVball)
 #Nothing is significantly different
 
 
+##you are comparing to baseline - you need to use emmeans to know whether any groups are sig. diff from eachother
 
 
 
